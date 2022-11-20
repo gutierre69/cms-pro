@@ -21,7 +21,7 @@
                     <ul class="dropdown-menu dropdown-menu-usermenu pull-right"  data-popper-placement="bottom-start">
                         <!-- <li><a class="dropdown-item" href="profile.html"><i class="fa fa-user-check"></i>  My Profile</a></li>
                         <li><a class="dropdown-item" href="#"><i class="fa fa-user-cog"></i> Account Settings</a></li>-->
-                        <li><a class="dropdown-item" href="{{ route('admin-user-password') }}"><i class="fa fa-user"></i> Change Password</a></li>
+                        <li><a class="dropdown-item" href="{{ route('admin-user-password') }}"><i class="fa fa-user"></i> {{_('Change Password')}}</a></li>
                         <li>
                             <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="fa fa-door-open"></i> {{ __('Logout') }}

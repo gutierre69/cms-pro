@@ -6,7 +6,7 @@
         <div class="col-md-12">
             @if($password_alert)
                 <div class="alert alert-danger" role="alert">
-                    Consider changing your password immediately. <a href="{{ route('admin-user-password') }}">Change Now!</a>
+                    {{__('Consider changing your password immediately.')}} <a href="{{ route('admin-user-password') }}">{{__('Change Now!')}}</a>
                 </div>
             @endif
 
