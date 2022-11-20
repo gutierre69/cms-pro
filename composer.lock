@@ -5917,12 +5917,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/gutierre69/faker-data.git",
-                "reference": "c6d295bdbfc882c34597aaaeae94f702872f779d"
+                "reference": "0a28eb4d4b8aa1ee1352d2aebed731e5848f6918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gutierre69/faker-data/zipball/c6d295bdbfc882c34597aaaeae94f702872f779d",
-                "reference": "c6d295bdbfc882c34597aaaeae94f702872f779d",
+                "url": "https://api.github.com/repos/gutierre69/faker-data/zipball/0a28eb4d4b8aa1ee1352d2aebed731e5848f6918",
+                "reference": "0a28eb4d4b8aa1ee1352d2aebed731e5848f6918",
                 "shasum": ""
             },
             "require": {
@@ -5956,7 +5956,7 @@
                 "issues": "https://github.com/gutierre69/faker-data/issues",
                 "source": "https://github.com/gutierre69/faker-data/tree/main"
             },
-            "time": "2022-11-20T00:44:31+00:00"
+            "time": "2022-11-20T01:47:37+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
