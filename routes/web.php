@@ -25,7 +25,7 @@ Route::get('/admin/dashboard', [App\Http\Controllers\Admin\DashboardController::
 
 /* --- CATEGORY ADMIN --- */
 Route::get('/admin/category', [App\Http\Controllers\Admin\CategoryController::class, 'index'])->name('admin-category');
-Route::post('/admin/category', [App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('admin-category-store');
+Route::post('/admin/category/store', [App\Http\Controllers\Admin\CategoryController::class, 'store'])->name('admin-category-store');
 Route::post('/admin/category/update/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'update'])->name('admin-category-update');
 Route::get('/admin/category/new', [App\Http\Controllers\Admin\CategoryController::class, 'new'])->name('admin-category-new');
 Route::get('/admin/category/edit/{id}', [App\Http\Controllers\Admin\CategoryController::class, 'edit'])->name('admin-category-edit');
@@ -33,7 +33,7 @@ Route::get('/admin/category/delete/{id}', [App\Http\Controllers\Admin\CategoryCo
 
 /* --- POSTS ADMIN --- */
 Route::get('/admin/post', [App\Http\Controllers\Admin\PostController::class, 'index'])->name('admin-post');
-Route::post('/admin/post', [App\Http\Controllers\Admin\PostController::class, 'store'])->name('admin-post-store');
+Route::post('/admin/post/store', [App\Http\Controllers\Admin\PostController::class, 'store'])->name('admin-post-store');
 Route::post('/admin/post/update/{id}', [App\Http\Controllers\Admin\PostController::class, 'update'])->name('admin-post-update');
 Route::get('/admin/post/new', [App\Http\Controllers\Admin\PostController::class, 'new'])->name('admin-post-new');
 Route::get('/admin/post/edit/{id}', [App\Http\Controllers\Admin\PostController::class, 'edit'])->name('admin-post-edit');
@@ -41,7 +41,7 @@ Route::get('/admin/post/delete/{id}', [App\Http\Controllers\Admin\PostController
 
 /* --- CONFIG ADMIN --- */
 Route::get('/admin/config', [App\Http\Controllers\Admin\ConfigController::class, 'index'])->name('admin-config');
-Route::post('/admin/config', [App\Http\Controllers\Admin\ConfigController::class, 'store'])->name('admin-config-store');
+Route::post('/admin/config/store', [App\Http\Controllers\Admin\ConfigController::class, 'store'])->name('admin-config-store');
 Route::post('/admin/config/update/{id}', [App\Http\Controllers\Admin\ConfigController::class, 'update'])->name('admin-config-update');
 Route::get('/admin/config/new', [App\Http\Controllers\Admin\ConfigController::class, 'new'])->name('admin-config-new');
 Route::get('/admin/config/edit/{id}', [App\Http\Controllers\Admin\ConfigController::class, 'edit'])->name('admin-config-edit');

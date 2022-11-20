@@ -18,7 +18,7 @@
                 <div class="card-header"><?php if(isset($row->id)) echo __("Edit"); else echo __("New"); ?> {{$singular_name}}</div>
                 <div class="card-body">
 
-                    <form action="{{ route('admin-'.$slug."-update", $row->id??'') }}" method="post" enctype="multipart/form-data">
+                    <form action="<?php if(!isset($row->id)) echo route('admin-'.$slug."-store"); else echo route('admin-'.$slug."-update", $row->id??''); ?>" method="post" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <input type="hidden" name="type" value="{{request()->get('type')??'page'}}" />
                         <div class="row form-group">
