@@ -4,16 +4,9 @@
     "description": "The Laravel Framework.",
     "keywords": ["framework", "laravel"],
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "git",
-            "url": "https://github.com/gutierre69/faker-data.git"
-        }
-    ],
     "require": {
         "php": "^7.3|^8.0",
         "fruitcake/laravel-cors": "^2.0",
-        "gutierre69/faker-data": "@dev",
         "guzzlehttp/guzzle": "^7.0.1",
         "intervention/image": "^2.7",
         "laravel/framework": "^8.75",
@@ -22,6 +15,7 @@
     },
     "require-dev": {
         "facade/ignition": "^2.5",
+        "gutierre69/faker-data": "@dev",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",
         "laravel/ui": "^3.4",
