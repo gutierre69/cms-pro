@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 use App\Events\PostRead;
+
 use App\Services\PostService;
 
 use App\Models\Category;
@@ -22,6 +23,8 @@ class PostController extends Controller
     public function single($slug){
         $data = array();
         $data['post'] = Post::where("slug", $slug)->first();
+
+        $data['post'] = PostService::postModifier($data['post']);
         
         event(new PostRead($data['post']));
         

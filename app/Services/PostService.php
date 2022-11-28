@@ -35,4 +35,30 @@ class PostService {
         }
     }
 
+    public static function postModifier(Post $post){
+
+        $pattern = "/\[youtube=(.*?)\]/";
+        $post->content = preg_replace_callback($pattern, function($matches){
+            $res = strip_tags($matches[1]);
+            $p = preg_match("#(?<=v=)[a-zA-Z0-9-]+(?=&)|(?<=v\/)[^&\n]+(?=\?)|(?<=v=)[^&\n]+|(?<=youtu.be/)[^&\n]+#", $res, $m);
+            if(isset($m[0])) {
+                return '<div class="video-responsive"><iframe width="420" height="315" src="https://www.youtube.com/embed/'.$m[0].'" frameborder="0" allowfullscreen></iframe></div>';
+            } else {
+                $idyoutube = $res;
+                $idyoutube = str_replace("https://www.youtube.com/shorts/","",$idyoutube);
+                $idyoutube = str_replace("https://youtube.com/shorts/","",$idyoutube);
+                $idyoutube = str_replace("https://www.youtu.be/shorts/","",$idyoutube);
+                if($idyoutube){
+                    $ped = explode("?", $idyoutube);
+                    $idyou = $ped[0];
+                    if($idyou){
+                        return '<div class="video-responsive"><iframe width="420" height="315" src="https://www.youtube.com/embed/'.$idyou.'" frameborder="0" allowfullscreen></iframe></div>';
+                    }
+                }
+            }
+        }, $post->content);
+
+        return $post;
+    }
+
 }

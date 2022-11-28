@@ -186,9 +186,5 @@ $(window).on("load", function() {
             $('.searchform').insertBefore('.header-right');
         }
     }
-    
-    
-   
-    
 
 });
